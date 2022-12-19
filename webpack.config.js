@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 let mode = 'development'
+let target = 'web'
 
 if(process.env.NODE_ENV === 'production') {
   mode = 'production'
@@ -9,6 +10,7 @@ if(process.env.NODE_ENV === 'production') {
 
 module.exports = {
   mode: mode,
+  target: target,
   devtool: "source-map",
 
   devServer: {
